@@ -1,0 +1,241 @@
+/* I clustered the styles for all viewport sizes and the media queries for different screen sizes. 
+This section is for the generic styles. */
+
+/* The .container element styles the whole webpage since all elements are wrapped up inside it.
+max-width defines a maximum screen usage of the displayed area, the rest is left white/blank. 
+Margin defines the space between the element and the next element around it, in this case it means, 
+that between container and blank space there is no additional gap. Padding defines the space between
+the borders of the element an its inside elements, like paragraphs or pictures. I set the font-family
+to sans-serif so that all elements of the webpage are not in default "Times New Roman" for Windows 
+browsers anymore. */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: sans-serif;
+}
+
+/* To address elements inside the outer container, first the container is called and then the desired element. 
+Here the header is addressed. Background-colour and colour of the elements (e.g. font) are set, padding defined
+to 20px and the text is centred. */
+.container header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Addresses the navigation bar inside the outer container. */
+.container nav {
+    background-color: #444;
+    padding: 10px;
+    text-align: center;
+}
+
+/* nav ul is an unordered list to implement a navigation bar that does not set any indices in front of the list's elements.
+Using an ordered list in navigation might confuse users, especially screen readers. Setting list-style-types to non removes 
+all bullet points or numbering from the list's elements. I'll do this to have only the clean words as buttons. */
+.container nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* nav li addresses the list's elements. The inline order enables the list elements to allign next to each other, since their
+default would list them underneath each other. */
+.container nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* the <a> statement is an anchor that nests elements inside other elements - in this case the navigation bar element. Setting 
+text-decoration to none removes the default underline decoration of the navigation links. */
+.container nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Since the main element includes all main content of the website I want to make sure, that the layout is lucid and predictable.
+the box-sizing statement helps to ensure that the specified widths and heights include padding and borders. Padding on top and 
+bottom makes it look tidier. */
+.container main {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+}
+
+/* All videos placed inside the main element will be styled accordingly. In this case I ensure that the video expands its width 
+over whole container width (100%) and maintains its ratio by setting height to auto. */
+.container main video {
+    width: 100%;
+    height: auto;
+}
+
+/* With the section element I defined a subclass of the main content to enable left floating only for the first page. I set the
+width to 50% for the section element and 50% of the aside element, so that they consume both the half of the outer container's width. */
+.container section {
+    width: 50%;
+    float: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+/* With the aside element I let certain content float on the right and, as mentioned above let it take up 50% of the outer container's 
+width.*/
+.container aside {
+    width: 50%;
+    float: right;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+/* The following code sets the styles for the images inside the aside element and ensures that all pictures have the same size. 
+This should be handled with caution since the change of the ratio of some pictures can be to severe and the picture looks 
+deformed. Especially for wider pictures it can be helpful to set the display parameter to block, so that they do not exceed the
+containers boarders horizontally. */
+.container aside img {
+    width: 400px;
+    height: 290px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* When addressing a class inside the outer container, the class is called directly (e.g. ".first-right-paragraph"). 
+For a btter structure of the page I set the box colour to a light grey. The advantage to set up a class for every content box 
+is that the design/colour can be adapted for each box individually. */
+.first-right-paragraph {
+    background-color: #f0f0f0;
+    padding: 20px;
+    height: 370px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.second-right-paragraph {
+    background-color: #f0f0f0;
+    padding: 20px;
+    height: 370px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.first-left-paragraph {
+    background-color: #ADD8E6;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    padding-right: 20px;
+    padding-left: 20px;
+    height: 370px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.second-left-paragraph {
+    background-color: #ADD8E6;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    padding-right: 20px;
+    padding-left: 20px;
+    height: 370px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+/* To make the footer independent of possible future code changes, I integrated a clear function that ensures,
+that even if the main function is set to float the footer is cleared and does not float. */
+.container footer {
+    clear: both;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+/* To make the website more accessible for keyboard users, the following styles implement a focus functionality to give the keyboard
+users a tool to see better where they are on the page. I implemented it for the navigation bar, the footer links and the buttons 
+like video play and audio play. */
+.container nav a:focus {
+    outline: 2px solid #fff;
+    outline-offset: 4px;
+}
+
+.container footer a:focus {
+    outline: 2px solid #fff;
+    outline-offset: 4px;
+}
+
+.container button:focus {
+    outline: 2px solid #fff;
+    outline-offset: 4px;
+}
+
+
+/* While the above code set the generic parameters for all view ports, the following code adapts the webpages 
+to different media queries for smaller screens. I adjusted to 768px and adapted the padding structure to have more content displayed.
+It makes also sense for smaller screens (e.g. mobile devices) to dispense with floating so that the user does not have to scroll sideways.
+While erasing the float it is good practice to set the width of the right and left floating content to 100% */
+@media screen and (max-width: 768px) {
+    .container header {
+        padding: 10px;
+    }
+
+    .container nav {
+        padding: 5px;
+    }
+
+    .container nav li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .container footer {
+        padding: 10px;
+    }
+
+    .container section {
+        width: 100%;
+        float: none;
+        padding: 10px;
+    }
+    
+    .container aside {
+        width: 100%;
+        float: none;
+        padding: 10px;
+    }
+}
+
+/* Same adjustments for 480px screens with lesser padding for more content viewed on smaller screen. */
+@media screen and (max-width: 480px) {
+    .container header {
+        padding: 5px;
+    }
+
+    .container nav {
+        padding: 3px;
+    }
+
+    .container nav li {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .container footer {
+        padding: 5px;
+    }
+    
+    .container section {
+        width: 100%;
+        float: none;
+        padding: 10px;
+    }
+
+    .container aside {
+        width: 100%;
+        float: none;
+        padding: 10px;
+    }
+}

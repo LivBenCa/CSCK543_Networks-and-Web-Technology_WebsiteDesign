@@ -1,0 +1,68 @@
+<!DOCTYPE html>                                                                 <!-- Defines the type of the document, to use it also outside of IDEs -->
+<html lang="en">                                                                <!-- Sets the language of the website to English -->
+<head>                                                                          <!-- The head defines the main information of the document -->
+    <meta charset="UTF-8">                                                      <!-- meta defines generell information about the whole document, here it sets the character encoding to UTF-8 standard -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">      <!-- viewport is the visible area of the users screen and this line defines how the website should scale on the screen -->
+    <title>Whiteside Snowboard Page 1</title>                                   <!-- title in the head defines the name of the website that is displayed in the browser's title bar or tab -->
+    <link rel="stylesheet" href="WebpageStyling.css">                           <!-- Here the external CSS stylesheet it linked to apply to the whole document -->
+</head>
+<body>                                                                          <!-- In the body the main code for the webpage is included -->
+    <div class="container" role="main">                                         <!-- Divisions are used to group related content, in this case it defines the container where the generic functionality and style is implemented. 
+                                                                                     As requested in the task description, the outer container capsules all the content/elements of the webpage. -->
+        <header role="banner">                                                  <!-- The header here defines the main headline of page one in size 1 (the biggest size). -->
+            <h1> Whiteside Dudes</h1>
+            <h2>- Just some kids who ride the board -</h2>                      <!-- I added another, smaller headline. -->
+        </header>
+        <nav role="navigation">                                                 <!-- The navigation bar includes the links as a list, tabindex defines the order of tabbing for keyboard users. target=blank opens the external links in a new tab of the browser.The <a> statement is an anchor that nests elements inside other elements -->
+            <ul>                                                                <!-- ul is an unordered list, in contrast to the ordered list, it does not set any indices in front of the list's elements. Using an ordered list in navigation might confuse users, especially screen readers.-->
+                                                                                <!-- li sets up the different list elements and <a> is an anchor to nest the elements. This is among others neccessary to enable TAB selection on the navigation bar für keyboard users. -->
+                <li><a href="Webpage 2.html" tabindex="1">More about Whiteside</a></li>     
+                <li><a href="https://stylefish.de/?lang=en" target="_blank" tabindex="2">Get your own style </a></li>
+                <li><a href="https://www.burton.com/static/community/advice/Burton-Snowboards-Home-Backyard-Terrain-Park.pdf?utm_source=youtube&utm_medium=organic_social&utm_campaign=global_en_consideration_w21__general&utm_content=backyardpark_pdf" target="_blank" tabindex="3">Build your own park</a></li>
+                <li><a href="https://www.bikepark-winterberg.de/en/" target="_blank" tabindex="4">Our Summer Residence</a></li>
+            </ul>
+        </nav>
+        <main role="main">                                                      <!-- ain displays the primary content like text boxes and pictures. -->
+            <section class="left-side" role="region">                           <!-- With the section element I am able to establish a left site of the first page without including the second page during CSS styling. Everthing inside this section is displayed left. -->
+                <div class="first-left-paragraph">                              <!-- I used divisions for related paragraphs to style them into text boxes. -->
+                    <h2>The Original Crew</h2>
+                    <p> It all started with a bunch of kids with snowboards, who wanted to make the most out of their Christmas holidays.
+                        At this time fun parks for snowboarder were only available in the alps or USA. 
+                    <p> So WE brought this spirit to our hometown.</p>       
+                    <p> Every winter some new vibes, people and fun elements were added to this place. The time seemed endless and wonderful.
+                        Unfortunately, with by time we all got out of school and into jobs. So we somehow lost each other and the park. But we didn't lose
+                        the passion for snowboarding.</p>
+                    <p> For this reason and the dedication to the park and the time we created this website shall remember the good old days.</p> 
+                    <p> A stylish and fun world where we created a place for us and kids from all around the county where we would come together and create our lifestyle.</p>
+                </div>
+                <div class="second-left-paragraph">
+                    <h2>Home Base</h2>
+                    <p> We were not located in the south of Germany and the alps were more than 6 hours away. But we lived in the uplands of the "Sauerland",
+                        which means land of springs in English.</p>
+                    <p> Of course there are no stoney mountains with glaciers, but at least a couple of +800m hills.
+                        So, snow was given to us almost all winter.</p>
+                    <p> Obviously it is common sense for teenagers who love to ride, to build a snowpark in DIY style - whatelse. 
+                        Some guys from our village even came around with a rope winch to speed things up a little.</p>
+                    <p> The first obstacles we built were more in a practical than a stylish sense. And the more experience we got the bigger and 
+                        more professional our obstacles looked.</p>
+                </div>
+            </section>
+            <aside class="right-side" role="complementary">                     <!-- The aside element enables the right section for this page and can be used to style all pages right side generically if included. -->
+                <div class="first-right-paragraph">                             <!-- I placed the images (img element, src for the link, alt for alternative text for screen readers) also inside boxes to align them with left sided text boxes. -->
+                    <img src="/Users/benediktgeitz/Desktop/IMG_4546.jpeg" alt="The image shows the original crew during a snowboard event in Mayrhofen (Austria)">
+                    <p>The crew started with trips to the alps and pioneered some powder snow areas with few knowledge about snowboarding, but with style and dedication. </p>
+                </div>
+                <div class="second-right-paragraph">
+                    <img src="/Users/benediktgeitz/Desktop/IMG_4552.jpeg" alt="The image shows the first setup of the Whiteside Snowboard Park.">
+                    <p>This is how we started of with our first layout of the Whiteside Snowboard Park. We felt like kings every day after school. </p>
+                </div>
+            </aside>
+        </main>
+        <footer role="contentinfo">
+            <a href="Webpage 2.html" tabindex="5">Next Page</a> |               <!-- The footer includes the link to the second page and a button to scroll directly to the top of the page. -->
+            <a href="#" id="scrollToTopBtn" tabindex="6">Go to Top</a>
+            <p>&copy; 2024 Whiteside Snowboard. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

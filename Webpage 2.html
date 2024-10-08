@@ -1,0 +1,60 @@
+<!-- This HTML document contains the same formatting and class structure as Webpage 1.html, so I decided to not comment every step. 
+Additionally to the first page, a video and a audio file are implemened. They were also integrated into the tabindex system and nested,
+so that keyboard users can interact with them properly. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whiteside Snowboard Page 2</title>
+    <link rel="stylesheet" href="WebpageStyling.css">
+</head>
+<body>
+    <div class="container" role="main">
+        <header role="banner">
+            <h1>The Whiteside Experience</h1>
+        </header>
+        <nav role="navigation">
+            <ul>
+                <li><a href="Webpage 1.html" tabindex="1">Whiteside Dudes</a></li>
+                <li><a href="https://stylefish.de/?lang=en" target="_blank" tabindex="2">Get your own style </a></li>
+                <li><a href="https://www.burton.com/static/community/advice/Burton-Snowboards-Home-Backyard-Terrain-Park.pdf?utm_source=youtube&utm_medium=organic_social&utm_campaign=global_en_consideration_w21__general&utm_content=backyardpark_pdf" target="_blank" tabindex="3">Build your own park</a></li>
+                <li><a href="https://www.bikepark-winterberg.de/en/" target="_blank" tabindex="4">Our Summer Residence</a></li>
+            </ul>
+        </nav>
+        <main role="main">
+            <div class="First-paragraph-p2">
+                <h2>Park Layout</h2>
+                <p>If you would ask us what the Whiteside Snowboard Park makes so special, we would probably all agree
+                    that it is the simplicity and DIY style. Since we were only kids at that time, it was just a simple meadow with a slope
+                    and some obsticles - it was our own work that we knew in every detail.</p>
+                <p>The ease also came with the fact that there was nothing much between you and the fun. No tickets to buy, no lift to use,
+                    and no journey upfront. The slope starts right next to the street and the parking space. You could sit on the lid handle
+                    of your trunk and start straight from there.</p>
+                <p>After the starting point  we mostly built rails or other stuff to slide on - the longer, the better. Often we installed 
+                    two rails right behind each other, with only a few metres for jumps, gaps or spins.</p>
+                <p>To keep the action up until the end, we always installed a quarter pipe at the foot of the slope and use the speed make
+                    some incredible plants or jumps.</p>
+                <p>In the following video you can see one of our layouts and how we used to ride them.</p>
+                <video controls tabindex="5" role="region">
+                    <source src="/Users/benediktgeitz/Desktop/IMG_4563.MOV" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="Second-paragraph-p2">
+                <h3>Further information:</h3>
+                <p>Listen to the following audio file to find more information and connect to other platforms we love.</p>
+                <audio controls tabindex="6" role="region">
+                    <source src="/Users/benediktgeitz/Desktop/NavBarInfo.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </main>
+        <footer role="contentinfo">
+            <a href="Webpage 1.html" tabindex="7">Previous Page</a> | 
+            <a href="#" id="scrollToTopBtn" tabindex="8">Go to Top</a>
+            <p>&copy; 2024 Snowboarding Hub. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
